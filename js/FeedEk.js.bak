@@ -13,7 +13,6 @@
             DescCharacterLimit: 0,
             TitleLinkTarget: "_blank",
             DateFormat: 'DD MMMM YYYY',
-            ShowCategory:false
         }, opt);
 
         var id = $(this).attr("id"), i, s = "", dt;
@@ -59,11 +58,12 @@
                          }
                          s += '</div>';
                     }
-//                    if (def.ShowCategory) {
-//                        s += '<div class="itemCategory">' + itm.channel.item.category; + '</div>';
-//                    }
+                    if (def.ShowCategory) {
+                        s += '<div class="itemCategory">' + itm.channel.item.category; + '</div>';
+                    }
                 });
-                $("#" + id).append('<ul class="feedEkList">' + s + '</ul>');
+//                $("#" + id).append('<ul class="feedEkList">' + s + '</ul>');
+                $("#" + id).append( s );
             }
         });
     };

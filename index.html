@@ -6,21 +6,42 @@
     <title>News dai giornali » RicostruzioneTrasparente.it</title>
     <link href="css/FeedEk.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-langs.min.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
     <script type="text/javascript" src="js/FeedEk.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#divRss').FeedEk({
-                FeedUrl: ["http://www.rssmix.com/u/8230447/rss.xml"],
-                DateFormat: 'DD/MM/YYYY',
-                DateFormatLang: 'it',
-                DescCharacterLimit: 150,
-                MaxCount: 1000
-            });
-        });
+//        $(document).ready(function () {
+//            $('#divRss').FeedEk({
+//                FeedUrl: ["http://www.rssmix.com/u/8230447/rss.xml"],
+//                DateFormat: 'DD/MM/YYYY',
+//                DateFormatLang: 'it',
+//                DescCharacterLimit: 150,
+//                MaxCount: 1000
+//            });
+//        });
+
+    $(function() {
+      // This is the array of feeds that we're displaying.
+      // More feeds can be added at the end.
+      var feeds = [
+        "http://www.rssmix.com/u/8230877/rss.xml"
+      ];
+
+      for	(index = 0; index < feeds.length; index++) {
+        var div_id = 'feed_'+index;
+          $("#divRss").append('<div class="post sieve" id="'+div_id+'" style=""></div>');
+          $("#"+div_id).FeedEk({
+//            $("#divRss"+div_id).FeedEk({
+            FeedUrl:feeds[index],
+            MaxCount : 250,
+            ShowDesc : false,
+            ShowPubDate:true,
+            TitleLinkTarget:'_blank',
+          });
+        }
+      });
     </script>
     <style>
-        body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;background-color: #efefef;font-size: 13px;line-height: 17px !important;}
+        body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 13px;line-height: 17px !important;}
         .rssDiv{float: left;padding-right: 35px;}
         ul{width: 100% !important;}
     </style>
@@ -45,7 +66,7 @@
     </script>
   <style>
   .feedEkList img {display:none;} /* nascondo provvisoriamente le immagini degli articoli... */
-  .feedEkList div, .feedEkList a {font-size:1rem !important;line-height:1.2rem;} /* e rendo più leggibili le news */
+  .feedEkList div, .feedEkItem a {font-size:1rem !important;line-height:1.2rem;} /* e rendo più leggibili le news */
   </style>
 </body>
 
