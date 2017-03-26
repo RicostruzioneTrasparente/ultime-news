@@ -33,7 +33,8 @@
 //            $("#divRss"+div_id).FeedEk({
             FeedUrl:feeds[index],
             MaxCount : 250,
-            ShowDesc : false,
+            ShowDesc : true,
+            DescCharacterLimit: 250,
             ShowPubDate:true,
             TitleLinkTarget:'_blank',
           });
@@ -48,12 +49,11 @@
 </head>
 <body>
   <div style="padding:10px;">
-    <h4 style="text-transform:uppercase;"><a href="https://docs.google.com/spreadsheets/d/1yLvIu08j9wDlUXyrazt2EEtppK4Hvb_o0HR1UFMkxms/edit#gid=0">elenco fonti usate</a> | <a href="https://github.com/RicostruzioneTrasparente/news-giornali">codice su github</a></h4>
+    <h4 style="text-transform:uppercase;"><a href="https://docs.google.com/spreadsheets/d/1yLvIu08j9wDlUXyrazt2EEtppK4Hvb_o0HR1UFMkxms/edit#gid=0">elenco fonti usate</a> | <a href="https://github.com/RicostruzioneTrasparente/news-giornali">codice su github</a> | <a href="https://github.com/RicostruzioneTrasparente/news-giornali/issues/1">segnala</a></h4>
     <h1>News dai giornali » RicostruzioneTrasparente.it</h1>
     <div>
         <div class="rssDiv">
             <div id="divRss" class="sieve"></div>
-            <strong>Code</strong>
         </div>
 
     </div>
@@ -67,6 +67,7 @@
   <style>
   .feedEkList img {display:none;} /* nascondo provvisoriamente le immagini degli articoli... */
   .feedEkList div, .feedEkItem a {font-size:1rem !important;line-height:1.2rem;} /* e rendo più leggibili le news */
+  div.form-inline input {height: 25px; width: 200px;}
   </style>
 </body>
 
