@@ -4,20 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="en" />
     <title>News dai giornali » RicostruzioneTrasparente.it</title>
-    <link href="css/FeedEk.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/moment.js"></script>
     <script type="text/javascript" src="js/FeedEk.js"></script>
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <script type="text/javascript">
-//        $(document).ready(function () {
-//            $('#divRss').FeedEk({
-//                FeedUrl: ["http://www.rssmix.com/u/8230447/rss.xml"],
-//                DateFormat: 'DD/MM/YYYY',
-//                DateFormatLang: 'it',
-//                DescCharacterLimit: 150,
-//                MaxCount: 1000
-//            });
-//        });
 
     $(function() {
       // This is the array of feeds that we're displaying.
@@ -48,27 +44,57 @@
     </style>
 </head>
 <body>
-  <div style="padding:10px;">
-    <h4 style="text-transform:uppercase;"><a target="_blank" href="https://docs.google.com/spreadsheets/d/1yLvIu08j9wDlUXyrazt2EEtppK4Hvb_o0HR1UFMkxms/edit#gid=0">elenco fonti usate</a> | <a target="_blank" href="https://github.com/RicostruzioneTrasparente/news-giornali">codice su github</a> | <a target="_blank" href="https://github.com/RicostruzioneTrasparente/news-giornali/issues/1">segnala</a></h4>
-    <h1>News dai giornali » RicostruzioneTrasparente.it</h1>
-    <div>
-        <div class="rssDiv">
-            <div id="divRss" class="sieve"></div>
-        </div>
+<!-- INIZIO navbar dal Sito -->
 
+<nav class="navbar navbar-default main-menu">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="logo">
+        <a class="navbar-brand" href="http://ricostruzionetrasparente.it/">
+          <img src="http://wp.ondata.it/ricostruzionetrasparente/wp-content/uploads/sites/6/2017/03/logo_nav.png" alt="logo">
+        </a>
+        <!-- Brand and toggle get grouped for better mobile display -->
+      </div>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="col-md-8">
+      <div class="">
+        <div id="MainNav">
+          <div id="menu" class="menu-menu-1-container">
+            <div class="" id="bs-example-navbar-collapse-1" style="display: block;">
+              <ul id="onepage_menu" class="nav navbar-nav navbar-right">
+                <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1yLvIu08j9wDlUXyrazt2EEtppK4Hvb_o0HR1UFMkxms/edit#gid=0">elenco fonti usate</a></li>
+                <li><a target="_blank" href="https://github.com/RicostruzioneTrasparente/news-giornali">codice su github</a></li>
+                <li><a target="_blank" href="https://github.com/RicostruzioneTrasparente/news-giornali/issues/1">segnala</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+
+<!-- FINE navbar dal Sito -->
+<section id="main-news" class="container">
+  <div class="row">
+    <div class="col-md-12 text-center" id="intro">
+      <h2>News dai giornali » RicostruzioneTrasparente.it</h2>
+    </div>
+    <div class="col-md-12">
+      <div class="rssDiv">
+        <div id="divRss" class="sieve"></div>
+      </div>
     </div>
     <div style="clear: both"></div>
   </div>
+</section>
+  </body>
   <script src="js/jquery.sieve.min.js" type="text/javascript"></script>
   <script>
-    var searchTemplate = "<div class='row form-inline'><label>Cerca: <input type='text' class='form-control' placeholder='(prova cercando &quot;accumoli...&quot;)'></label></div>"
+    var searchTemplate = "<div class='row form-inline text-center'><label>Cerca: <input type='text' class='form-control' placeholder='(prova cercando &quot;accumoli...&quot;)'></label></div>"
     $("div.rssDiv").sieve({ searchTemplate: searchTemplate, itemSelector: "li" });
-    </script>
-  <style>
-  .feedEkList img {display:none;} /* nascondo provvisoriamente le immagini degli articoli... */
-  .feedEkList div, .feedEkItem a {font-size:1rem !important;line-height:1.2rem;} /* e rendo più leggibili le news */
-  div.form-inline input {height: 25px; width: 200px;}
-  </style>
-</body>
-
+  </script>
 </html>
