@@ -1,6 +1,6 @@
 flusso di news sul terremoto provenienti da giornali
 
-* [Demo funzionante](https://ricostruzionetrasparente.github.io/news-giornali/)
+* [Demo funzionante](https://ricostruzionetrasparente.github.io/ultime-news/)
 * [Elenco delle fonti utilizzate - in aggiornamento](https://docs.google.com/spreadsheets/d/1yLvIu08j9wDlUXyrazt2EEtppK4Hvb_o0HR1UFMkxms/edit#gid=0)
 
 Codice
