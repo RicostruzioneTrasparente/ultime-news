@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="en" />
-    <title>News dalle fonti istituzionali » RicostruzioneTrasparente.it</title>
+    <title>Guida per gli utenti » RicostruzioneTrasparente.it</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/moment.js"></script>
     <script type="text/javascript" src="js/FeedEk.js"></script>
@@ -13,35 +13,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <script type="text/javascript">
-
-    $(function() {
-      // This is the array of feeds that we're displaying.
-      // More feeds can be added at the end.
-      var feeds = [
-        "http://www.rssmix.com/u/8230959/rss.xml"
-      ];
-
-      for	(index = 0; index < feeds.length; index++) {
-        var div_id = 'feed_'+index;
-          $("#divRss").append('<div class="post sieve" id="'+div_id+'" style=""></div>');
-          $("#"+div_id).FeedEk({
-//            $("#divRss"+div_id).FeedEk({
-            FeedUrl:feeds[index],
-            MaxCount : 250,
-            ShowDesc : true,
-            DescCharacterLimit: 250,
-            ShowPubDate:true,
-            TitleLinkTarget:'_blank',
-          });
-        }
-      });
-    </script>
-    <style>
-        #main-news a {
-            color:#cd4638 !important;
-            }
-    </style>
 </head>
 <body>
 <!-- INIZIO navbar dal Sito -->
@@ -64,9 +35,9 @@
           <div id="menu" class="menu-menu-1-container">
             <div class="" id="bs-example-navbar-collapse-1" style="display: block;">
               <ul id="onepage_menu" class="nav navbar-nav navbar-right">
-                <li class=""><a href="index.html">Giornali</a></li>
-                <li class="active"><a href="istituzionali.html">Istituzioni</a></li>
-                <li class=""><a href="guida.html">Guida</a></li>
+                <li><a href="index.html">Giornali</a></li>
+                <li class=""><a href="istituzionali.html">Istituzioni</a></li>
+                <li class="active"><a href="guida.html">Guida</a></li>
               </ul>
             </div>
           </div>
@@ -81,20 +52,32 @@
 <section id="main-news" class="container">
   <div class="row">
     <div class="col-md-12 text-center" id="intro">
-      <h2>News dalle fonti istituzionali » RicostruzioneTrasparente.it</h2>
+      <h2>Guida all'uso</h2>
     </div>
     <div class="col-md-12">
       <div class="rssDiv">
-        <div id="divRss" class="sieve"></div>
+        <div id="divRss" class="lead">
+          Queste pagine raccolgono le ultime notizie pubblicate dalle principali fonti informative che si occupano del terremoto Centro Italia, suddivise in due categorie: fonti istituzionali e fonti giornalistiche.
+          In questo momento questo servizio si basa sulla tecnologia "feed rss": le fonti che la mettono a disposizione sono incluse qui, le fonti che non la mettono
+          a disposizione non possono tecnologicamente essere incluse. Se credi che il tuo sito sia una fonte da includere e hai un feed rss, <a href="mailto:info@ricostruzionetrasparente.it?subject='Segnalazione fonte'">scrivici una mail per chiedere che il tuo sito venga incluso</a>.
+          <hr>
+          <li class="lead">
+            Le <strong>fonti istituzionali</strong> attualmente presenti sono quelle incluse in questo elenco
+            <iframe src="https://docs.google.com/spreadsheets/d/1yLvIu08j9wDlUXyrazt2EEtppK4Hvb_o0HR1UFMkxms/pubhtml?gid=164015847&single=true" width=100% frameborder=0 scrolling="yes" height=350></iframe>
+          </li>
+          <br>
+          <li class="lead">
+            Le <strong>fonti giornalistiche</strong> attualmente presenti sono quelle incluse in questo elenco
+            <iframe src="https://docs.google.com/spreadsheets/d/1yLvIu08j9wDlUXyrazt2EEtppK4Hvb_o0HR1UFMkxms/pubhtml?gid=1480910433&single=true" width=100% frameborder=0 scrolling="yes" height=350></iframe>
+          </li>
+          <br>
+          <p>Se ti occupi di software e vuoi vedere come funzionano queste pagine, dai un'occhiata al codice che si trova su <a target="_blank" href="https://github.com/RicostruzioneTrasparente/news-giornali">github</a>
+          </p>
+        </div>
       </div>
     </div>
     <div style="clear: both"></div>
   </div>
 </section>
   </body>
-  <script src="js/jquery.sieve.min.js" type="text/javascript"></script>
-  <script>
-    var searchTemplate = "<div class='row form-inline text-center'><label>Cerca: <input type='text' class='form-control' placeholder='(prova cercando &quot;accumoli...&quot;)'></label></div>"
-    $("div.rssDiv").sieve({ searchTemplate: searchTemplate, itemSelector: "li" });
-  </script>
 </html>
