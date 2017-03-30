@@ -34,7 +34,7 @@ li {
     margin-bottom:0px;
 }
 
-.itemDate{
+.itemDate, .itemSource {
     font-size:13px;
     color:#858585;
     }

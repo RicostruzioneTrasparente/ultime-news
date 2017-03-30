@@ -59,9 +59,9 @@
                          }
                          s += '</div>';
                     }
-//                    if (def.ShowCategory) {
-//                        s += '<div class="itemCategory">' + itm.channel.item.category; + '</div>';
-//                    }
+                    if (def.ShowSource) {
+                        s += '<div class="itemSource">' + itm.channel.item.guid.content; + '</div>';
+                    }
                 });
                 $("#" + id).append('<ul class="feedEkList">' + s + '</ul>');
             }
