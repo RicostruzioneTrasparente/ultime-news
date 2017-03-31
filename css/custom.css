@@ -71,3 +71,11 @@ li {
   .navbar-brand {
     padding: 8px !important;
 }
+
+div.form-inline {
+  margin:70px 0px 70px 0px;
+}
+
+label {
+    font-size: 20px;
+}
