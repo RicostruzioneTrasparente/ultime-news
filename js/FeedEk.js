@@ -19,7 +19,7 @@
         var id = $(this).attr("id"), i, s = "", dt;
         $("#" + id).empty();
         if (def.FeedUrl == undefined) return;
-        $("#" + id).append('<div class="text-center"><img src="loader.gif" /></div>');
+        $("#" + id).append('<div id="preloading"><img class="text-center" src="loader.gif" /></div>');
 
         var YQLstr = 'SELECT channel.item FROM feednormalizer WHERE output="rss_2.0" AND url ="' + def.FeedUrl + '" LIMIT ' + def.MaxCount;
 
@@ -33,7 +33,18 @@
                 }
                 $.each(data.query.results.rss, function (e, itm) {
 
-                  s += '<li><div class="itemTitle"><a href="' + itm.channel.item.link + '" target="' + def.TitleLinkTarget + '" >' + itm.channel.item.title + '</a></div>';
+                  s += '<li>';
+
+                    if (def.ShowImage) {
+                      if (itm.channel.item.enclosure != null && itm.channel.item.enclosure != undefined ) {
+                        s += '<div class="itemImage"><p><img src="' + itm.channel.item.enclosure.url;
+                        s += '" /></p></div>'
+                        }
+                      }
+
+                  s += '<div class="itemTitle"><a href="' + itm.channel.item.link + '" target="' + def.TitleLinkTarget + '" >' + itm.channel.item.title + '</a></div>';
+
+
                     if (def.ShowPubDate){
                         dt = new Date(itm.channel.item.pubDate);
                         s += '<div class="itemDate">';
