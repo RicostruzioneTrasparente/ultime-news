@@ -1,5 +1,5 @@
 body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 13px;line-height: 17px !important;}
-.rssDiv{float: left;padding-right: 35px;}
+
 
 .navbar-nav>li>a, #intro h5 {
     text-transform: uppercase;
@@ -114,4 +114,15 @@ ul.feedEkList {
 
 #intro {
     margin-top: 18rem;
+}
+
+ul.nav {
+      background: #f7f7f7;
+}
+
+
+/* .rssDiv{float: left;padding-right: 35px;} */
+
+.itemSource {
+      overflow: hidden;
 }
