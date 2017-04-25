@@ -83,23 +83,21 @@
   </div><!-- /.container-fluid -->
 </nav>
 <!-- FINE navbar dal Sito -->
-<section id="main-news" class="container">
+
+<section id="main-news">
   <div class="row">
-    <div class="col-md-12" role="alert" id="intro">
-      <p class="lead alert alert-warning">Cerca tra le ultime notizie pubblicate dalle <strong>fonti istituzionali</strong> che si occupano del terremoto e della ricostruzione del Centro Italia. Vuoi sapere di più su come funziona questo strumento? Leggi la <a href="guida.html">guida</a></p>
-    </div>
-    <div class="col-md-12">
       <div class="rssDiv">
-        <div id="divRss" class="sieve"></div>
+        <div id="divRss" class="sieve container">
+        </div>
       </div>
+    <div style="clear: both">
     </div>
-    <div style="clear: both"></div>
   </div>
 </section>
   </body>
   <script src="js/jquery.sieve.min.js" type="text/javascript"></script>
   <script>
-    var searchTemplate = "<div class='row form-inline text-center'><label>Cerca una notizia: <input type='text' class='form-control' placeholder='(prova cercando &quot;accumoli...&quot;)'></label></div>"
+    var searchTemplate = "<div class='alert alert-warning form-inline text-center'><label>Cerca una notizia: <input type='text' class='form-control' placeholder='(prova cercando &quot;accumoli...&quot;)'></label><p class=' itemContent cerca'>Cerca tra le ultime notizie pubblicate dalle <strong>fonti istituzionali</strong> che si occupano del terremoto e della ricostruzione del Centro Italia. Vuoi sapere di più su come funziona questo strumento? Leggi la <a href='guida.html'>guida</a></p></div>"
     $("div.rssDiv").sieve({ searchTemplate: searchTemplate, itemSelector: "li" });
   </script>
 </html>

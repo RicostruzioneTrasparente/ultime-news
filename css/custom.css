@@ -68,9 +68,6 @@ li {
     padding: 8px !important;
 }
 
-div.form-inline {
-  margin:110px 0px 110px 0px;
-}
 
 label {
     font-size: 20px;
@@ -125,4 +122,17 @@ ul.nav {
 
 .itemSource {
       overflow: hidden;
+}
+
+/* form di ricerca */
+
+
+div.form-inline {
+  margin:65px 0px 110px 0px;
+  padding-top: 50px;
+}
+
+p.cerca {
+  margin-top:50px;
+  padding:0rem 7rem 0rem 7rem;
 }
